@@ -28,5 +28,24 @@ var user = {
       url: USER_INFO,
       success: options.callback,
     })
-  }
+  },
+  getuserinfo: function(options) {
+    $.ajax({
+      url: USER_INFO_GET,
+      success: options.callback
+
+    })
+  },
+  getuserinfo_edit: function(options) {
+    $.ajax({
+      url: USER_INFO_EDIT,
+      type: 'post',
+      data: options.data,
+      contentType: false,
+      processData: false,
+      success: options.callback
+    })
+  },
+
+
 };

@@ -151,21 +151,23 @@
       // 2,用户简单信息获取功能
       // 加载中直接请求服务端展示用户简单信息
     user.getuser({
-      callback: function(res) {
-        // 将获取到的数据展示到页面上
-        if (res.code === 200) {
+        callback: function(res) {
+          // 将获取到的数据展示到页面上
+          if (res.code === 200) {
 
-          // 左侧
-          $('.user_info img').prop('src', res.data.user_pic)
-            .siblings('span').text(res.data.nickname)
-            // 右侧
-          $('.user_center_link img').prop('src', res.data.user_pic)
+            // 左侧
+            $('.user_info img').prop('src', res.data.user_pic)
+              .siblings('span').text(res.data.nickname)
+              // 右侧
+            $('.user_center_link img').prop('src', res.data.user_pic)
+
+          }
+
 
         }
-
-
-      }
-    })
+      })
+      // 3，个人中心在用户的详细信息在user.html中修改
+      // 用了iframe 标签
   </script>
 </body>
 
